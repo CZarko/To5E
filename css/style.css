@@ -1,0 +1,33 @@
+body {
+	background-color:#e6af44;
+}
+
+header {
+	width:100%;
+	position:fixed;
+	z-index:99;
+}
+
+.bg-dark {
+	background-color:transparent !important;
+}
+
+.navbar-brand {
+	color:#FFF !important;
+	font-weight:bold;
+	font-size:2.5rem;
+	letter-spacing:0.1rem;
+}
+
+ul.navbar-nav {
+	padding-top:1rem;
+}
+
+ul.navbar-nav li a.nav-link {
+	color:#FFF !important;
+	font-size:1.25rem;
+}
+
+.about {
+	padding-top:20vh;
+}
