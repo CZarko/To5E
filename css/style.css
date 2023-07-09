@@ -1,5 +1,6 @@
 body {
-	background-color:#e6af44;
+	position:relative;
+	background-color:#e99c57;
 }
 
 header {
@@ -19,15 +20,48 @@ header {
 	letter-spacing:0.1rem;
 }
 
-ul.navbar-nav {
-	padding-top:1rem;
-}
-
 ul.navbar-nav li a.nav-link {
 	color:#FFF !important;
 	font-size:1.25rem;
+	padding-top: 1rem;
 }
 
-.about {
-	padding-top:20vh;
+.alt {
+	background:#e99c57 !important;
+	box-shadow:1px 2px 4px 0px #00000075 !important;
+}
+
+.alt .navbar-brand {
+	color:#51ff0d !important;
+}
+
+.alt ul.navbar-nav li a.nav-link {
+	color:#00241B !important;
+}
+
+ul.navbar-nav li a.nav-link:hover {
+	color:#ca6624 !important;
+}
+
+ul.navbar-nav li a.nav-link.active{
+	color:red !important;
+	transition:all.3s;
+}
+
+.banner {
+	position:relative;
+	background:url('../img/To5E-4a.jpg');
+	background-attachment:fixed;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	
+	height:100vh;
+	clip-path:polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+	box-shadow:inset 1px 2px 40px 1px #00000075 !important;
+}
+
+section {
+	padding-top:10vh;
+	height:100vh;
 }

@@ -4,28 +4,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>To5E</title>
 		
+		<!--Bootstrap-->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 		
+		<!--JQuery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		
+		<!--tsParticles-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.10.1/tsparticles.bundle.min.js" integrity="sha512-j5kDv+/z6SgAum5eWYUQEUYAc9z4yOyGESwj5Z5lfo3IFF/rKVslUaijABd59V+GTcAvmZQ/v9ov3Os2PwRp5w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		
+		<!--CSS-->
 		<link rel="stylesheet" href="./css/style.css"/>
 	</head>
-	<body>
-		<!--HEADER/NAVBAR-->
+	<body data-spy="scroll" data-target="nav" data-offset="0">
+		<!--Header/Navbar-->
 		<header>
 			<script type="text/javascript">
 				$(document).ready(function(){
 					$(window).scroll(function(){
 						if($(document).scrollTop()>50){
 							$("nav").addClass("alt")
-						} else {
+						}else{
 							$("nav").removeClass("alt")
 						}
 					});
 				});
 			</script>
-			<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div class="container-fluid">
-					<a class="navbar-brand" href="#about">Temple of the 5 Elements</a>
+					<a class="navbar-brand" href="#home">Temple of the 5 Element</a>
 				</div>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -33,82 +41,122 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#about">About</a>
+							<a class="nav-link" href="#about">About</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Donate</a>
+							<a class="nav-link" href="#donate">Donate</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Team</a>
+							<a class="nav-link" href="#team">Team</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Contact</a>
+							<a class="nav-link" href="#contact">Contact</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
 		</header>
 		
-		<!--ABOUT-->
-		<section class="about">
-			<div class="container">
-				<h2 style="display:inline;">The Temple of the 5 Elements</h2>
-				<p style="display:inline;">is a meditation on love and the fulfilled hope of re/connection. After two years mostly apart, I wanted to create an idea that would bring friends, old and new, together to embrace, maybe kiss, and experience the joy of human connection that has been absent for too long and for too many. My intent is for this installation to inspire people to interact with it and with each other, which will be achieved since it will take two people standing on the disk to trigger the effect. My hope is it reawakens a sense of love for each other. That love is elemental. That love is the light we need to guide us through the darkness we experience in our lives. And have fun in the process.</p>
-			</div>
-		</section>
+		<!--tsParticle System-->
+		<div id="tsparticles"></div>
+		<script type="text/javascript">
+			tsParticles.load("tsparticles", {
+				particles: {
+					number: {
+						value: 1000,
+						density: {
+							enable: true,
+							value_area: 800
+						}
+					},
+					color: {
+						value: ["#f9cb85", "#75330a", "#e6813a", "#bc7739", "#ca6624"]
+					},
+					shape: {
+						type: "square",
+					},
+					size: {
+						value: {min: 1, max: 5}
+					},
+					opacity: {
+						value: {min: 0.2, max: 0.8}
+					},
+					move: {
+						enable: true,
+						speed: {min: 5, max: 10},
+						direction: "bottom-right"
+					}
+				}
+			});
+		</script>
 		
-		<!--DONATE-->
-		<section class="donate">
-			<div class="container">
-				<div class="row">
-					<h2>Make a Donation</h2>
-					<button>todo</button>
+		<div>
+			<!--Banner-->
+			<div class="banner" id="home"></div>
+			<!--About-->
+			<section id="about">
+				<div class="container">
+					<h2 style="display:inline; color:51ff0d">The Temple of the 5 Elements</h2>
+					<p style="display:inline; color:fff">is a meditation on love and the fulfilled hope of re/connection. After two years mostly apart, I wanted to create an idea that would bring friends, old and new, together to embrace, maybe kiss, and experience the joy of human connection that has been absent for too long and for too many. My intent is for this installation to inspire people to interact with it and with each other, which will be achieved since it will take two people standing on the disk to trigger the effect. My hope is it reawakens a sense of love for each other. That love is elemental. That love is the light we need to guide us through the darkness we experience in our lives. And have fun in the process.</p>
 				</div>
-				<div class="row">
-					<h3>About To5E, LLC</h3>
-					<p>To5E, LLC is a legal entity established to provide an ethical means of managing the donations for the project that will be transparent to all members. We do not expect to make a profit and any donations in excess of expected needs will be invested back into the project and/or cover other associated costs. Please note that our fundraising goal of $16,000 is not the total cost of project, it’s the minimum we need to make it happen.</p>
+			</section>
+
+			<!--DONATE-->
+			<section id="donate">
+				<div class="container">
+					<div class="row">
+						<h2>Make a Donation</h2>
+						<button>todo</button>
+					</div>
+					<div class="row">
+						<h3>About To5E, LLC</h3>
+						<p>To5E, LLC is a legal entity established to provide an ethical means of managing the donations for the project that will be transparent to all members. We do not expect to make a profit and any donations in excess of expected needs will be invested back into the project and/or cover other associated costs. Please note that our fundraising goal of $16,000 is not the total cost of project, it’s the minimum we need to make it happen.</p>
+					</div>
 				</div>
-			</div>
-		</section>
-		
-		<!--ABOUT TEAM-->
-		<section class="team">
-			<h2>The To5E Team</h2>
-			<div>
-				<div>
-					<h3>Matt Scott</h3>
-					<p>Dr. Scott (Matt Scott) is a 15yr burner, burning since 2005. He is a TCO for Camp Monkey Business and has built much of the camp’s infrastructure including the Banana Beacon.<br/><br/>Dr. Scott has volunteered on art & media projects including Man-O-Morphosis, Mucaro, and “The Art of Burning Man.” In the pandemic years, he created “City of Dust” a 7-min 3DVR film for BMVR screened in Videogasam’s virtual camp. In his personal life, Dr. Scott makes IMAX nature docs and teaches IMAX filmmaking at USC.<br/><br/>PHOTO BY <a href="https://photolauren.com/">LAUREN RANDOLPH</a></p>
+			</section>
+
+			<!--ABOUT TEAM-->
+			<section id="team">
+				<div class="container">
+					<h2>The To5E Team</h2>
+					<div>
+						<div>
+							<h3>Matt Scott</h3>
+							<p>Dr. Scott (Matt Scott) is a 15yr burner, burning since 2005. He is a TCO for Camp Monkey Business and has built much of the camp’s infrastructure including the Banana Beacon.<br/><br/>Dr. Scott has volunteered on art & media projects including Man-O-Morphosis, Mucaro, and “The Art of Burning Man.” In the pandemic years, he created “City of Dust” a 7-min 3DVR film for BMVR screened in Videogasam’s virtual camp. In his personal life, Dr. Scott makes IMAX nature docs and teaches IMAX filmmaking at USC.<br/><br/>PHOTO BY <a href="https://photolauren.com/">LAUREN RANDOLPH</a></p>
+						</div>
+						<div>
+							<img src=""/>
+						</div>
+					</div>
+					<div>
+						<div>
+							<img src=""/>
+						</div>
+						<div>
+							<h3>Diana Bradbury</h3>
+							<p>Diana is a 7 year Burning Man attendee and mixed media artist originally from Reno, Nevada, now living in Highland Park, Los Angeles. She was the camp administrator for Our House Camp for 5 years and was a crewmember for RVFMTV2, an art installation inside the man-base in 2012.<br/><br/>She is currently creating a brand of housewares and clothes using mostly upcycled items called <a href="https://instagram.com/sadbradbury">@sadbradbury</a>. You can follow her at <a href="https://instagram.com/dirtydiana">@dirtydiana</a> on instagram and twitter.<br/><br/>PHOTO BY <a href="https://photolauren.com/">LAUREN RANDOLPH</a></p>
+						</div>
+					</div>
 				</div>
-				<div>
-					<img src=""/>
+			</section>
+
+			<!--CONTACT-->
+			<section id="contact">
+				<div class="container">
+					<h2>We'd love to hear from you!</h2>
+					<!--social media links-->
+					<h3>Want to learn more?</h3>
+					<p>You can send us an <a href="templeofthe5elements@gmail.com">email</a> or fill out the contact form below to ask us any questions you might have!<br/><br/>You can also sign up for our email updates to stay current with our project.</p>
+
+					<!--sign up with lines-->
+
+					<h3>Want to get involved?</h3>
+					<p>We are looking for people to help us build in the LA area and on-playa volunteers to take nighttime shifts as docents with the installation.<br/><br/>Also, we are specifically looking for people with 3D printing experience and people who can help us program the LED lighting effects with DMX / XLights / Raspberry Pi and pressure sensors.<br/><br/>
+					Use the contact form below to let us know you’re interested. Also, please, sign up for email updates to keep up-to-date with the project100vh</p>
+
+					<!--contact form-->
 				</div>
-			</div>
-			<div>
-				<div>
-					<img src=""/>
-				</div>
-				<div>
-					<h3>Diana Bradbury</h3>
-					<p>Diana is a 7 year Burning Man attendee and mixed media artist originally from Reno, Nevada, now living in Highland Park, Los Angeles. She was the camp administrator for Our House Camp for 5 years and was a crewmember for RVFMTV2, an art installation inside the man-base in 2012.<br/><br/>She is currently creating a brand of housewares and clothes using mostly upcycled items called <a href="https://instagram.com/sadbradbury">@sadbradbury</a>. You can follow her at <a href="https://instagram.com/dirtydiana">@dirtydiana</a> on instagram and twitter.<br/><br/>PHOTO BY <a href="https://photolauren.com/">LAUREN RANDOLPH</a></p>
-				</div>
-			</div>
-		</section>
-		
-		<!--CONTACT-->
-		<section class="contact">
-			<h2>We'd love to hear from you!</h2>
-			<!--social media links-->
-			<h3>Want to learn more?</h3>
-			<p>You can send us an <a href="templeofthe5elements@gmail.com">email</a> or fill out the contact form below to ask us any questions you might have!<br/><br/>You can also sign up for our email updates to stay current with our project.</p>
-			
-			<!--sign up with lines-->
-			
-			<h3>Want to get involved?</h3>
-			<p>We are looking for people to help us build in the LA area and on-playa volunteers to take nighttime shifts as docents with the installation.<br/><br/>Also, we are specifically looking for people with 3D printing experience and people who can help us program the LED lighting effects with DMX / XLights / Raspberry Pi and pressure sensors.<br/><br/>Use the contact form below to let us know you’re interested. Also, please, sign up for email updates to keep up-to-date with the project.
-			</p>
-			
-			<!--contact form-->
-		</section>
-		
+			</section>
+		</div>
 	</body>
 </html>
