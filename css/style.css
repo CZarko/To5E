@@ -111,7 +111,7 @@ p {
 }
 
 .btn-custom {
-	width:10vw;
+	width:11rem !important;
 	margin:0.5vw;
 	border-color:red !important;
 	color:red !important;
