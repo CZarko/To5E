@@ -25,6 +25,16 @@ header {
 	padding-left:1vw;
 }
 
+.navbar-brand::after {
+	content:"Temple of the 5 Elements";
+}
+
+@media screen and (max-width:1000px){ 
+	.navbar-brand::after {
+		content:"To5E";
+	}
+}
+
 ul.navbar-nav {
 	padding-right:1vw;
 }
@@ -37,8 +47,21 @@ ul.navbar-nav li a.nav-link {
 	padding-top: 1rem;
 }
 
+/*.alt .nav-gradient {
+	height:3vh;
+	background:linear-gradient(180deg, #e99c57 10%, 60%, transparent), url("../img/nnnoise.svg");
+}*/
+
+.custom-toggler.navbar-toggler {
+	border:none;
+}
+
+.custom-toggler .navbar-toggler-icon {
+	/*background-image:url("../img/menu-round-svgrepo-com.svg");*/
+}
+
 .alt {
-	background:#e99c57 !important;
+	background-color:#e99c57 !important;
 	/*box-shadow:1px 2px 25px 40px #e99c57 !important;*/
 	transition:all.1s;
 }
@@ -84,7 +107,21 @@ h1, h2, h3, h4, h5, h6 {
 p {
 	font-family:"Quicksand", sans-serif;
 	font-weight:bold;
-	font-size: 24px;
+	font-size: 18px;
+}
+
+.btn-custom {
+	width:10vw;
+	margin:0.5vw;
+	border-color:red !important;
+	color:red !important;
+	font-family:"Quicksand", sans-serif;
+	font-weight:bold;
+	font-size: 18px;
+}
+
+.btn-custom:hover {
+	background:red !important;
 }
 
 footer {
