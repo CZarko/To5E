@@ -102,26 +102,34 @@ section {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family:"Staatliches", sans-serif;
+	color:#533416;
 }
 
 p {
 	font-family:"Quicksand", sans-serif;
 	font-weight:bold;
 	font-size: 18px;
+	color:#533416;
+}
+
+hr {
+	border-top:3px solid #8b3a05;
 }
 
 .btn-custom {
 	width:11rem !important;
 	margin:0.5vw;
-	border-color:red !important;
-	color:red !important;
+	border-color:#ca6624 !important;
+	border:solid;
+	color:#ca6624;
 	font-family:"Quicksand", sans-serif;
 	font-weight:bold;
 	font-size: 18px;
 }
 
 .btn-custom:hover {
-	background:red !important;
+	background:#ca6624 !important;
+	color:#533416 !important;
 }
 
 footer {
